@@ -12,13 +12,13 @@ use App\Band_user;
 
 class SheetsController extends Controller
 {
-    // public function sheet_select($id){
-    //     $sheet = Sheet::find($id);
-    //     $songs = Sheet::find($id)->songs();
+    // お邪魔します。。
+    public function getLogout(){
+        Auth::logout();
+        return redirect('/login');
+        }
 
-    //     return view('sheets.sheet_confirm',['sheet' => $sheet,'songs'=> $songs]);
 
-    // }
    
     public function sheet_latest(){
         $sheet = Sheet::latest()->first();

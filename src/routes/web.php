@@ -13,6 +13,7 @@
 
 
 Route::get('/','SheetsController@top');
+Route::get('/logout','SheetsController@getLogout');
 
 Route::group(["middleware"=>"auth"],function(){
 
@@ -52,8 +53,8 @@ Route::group(["middleware"=>"auth"],function(){
     // /profileのルーティング
     Route::get('/profile','ProfileController@index');
     Route::patch('/profile/update/{id}', 'ProfileController@update');
-    Route::post('/profile/store', 'ProfileController@store');
-    Route::get('/profile/edit','ProfileController@edit');
+    Route::post('/profile/store/{id}', 'ProfileController@store');
+    Route::get('/profile/edit/{id}','ProfileController@edit');
     
 
 

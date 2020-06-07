@@ -60,6 +60,10 @@
                     </ul>
 
                     
+                    <a href = "/logout"> <img src="/storage/profile_images/{{ Auth::id() }}.jpg"  width="50px" height="50px" style="border-radius: 50%;"></a>
+                    
+                    </div>
+                    
                 </div>
             </nav>
     </header>

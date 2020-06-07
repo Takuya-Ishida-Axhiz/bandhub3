@@ -16,15 +16,9 @@ Bandhub Profile {{ Auth::user()->name }}
                 <header>
                     <!-- here’s the avatar -->
                     <a target="_blank" href="#">
-                    <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink">
-                    </a>
-
-
                     @if ($is_image)
-                        <figure>
-                        <img src="/storage/profile_images/{{ Auth::id() }}.jpg" width="100px" height="100px">
-                        <figcaption>現在のプロフィール画像</figcaption>
-                        </figure>
+                    <img src="/storage/profile_images/{{ Auth::id() }}.jpg"  width="100px" height="100px">
+                    </a>
                     @endif
 
                     <!-- the username -->
@@ -35,8 +29,8 @@ Bandhub Profile {{ Auth::user()->name }}
 
                     <!-- and role or location -->
                     <h2>
-                            {{ Auth::user()->part }} @ Bandname
-                        </h2>
+                            {{ Auth::user()->part }} @ {{ $band->band_name }}
+                    </h2>
 
                 </header>
 
@@ -54,7 +48,7 @@ Bandhub Profile {{ Auth::user()->name }}
                         {{ Auth::user()->comments }}
                     </p>
 
-                    <a href ="{{ url('/profile/edit') }}"  class="btn btn-outline-dark rounded-pill">編集</a>
+                    <a href ="{{ url('/profile/edit',$auths->id) }}"  class="btn btn-outline-dark rounded-pill">編集</a>
                 
                 </div>
 
