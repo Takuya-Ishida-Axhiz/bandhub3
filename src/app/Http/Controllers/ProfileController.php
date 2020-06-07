@@ -34,6 +34,7 @@ class ProfileController extends Controller
     {
         $request->photo->storeAs('public/profile_images', Auth::id() . '.jpg');
  
+        // transliterator_transliterate
         return redirect('profile')->with('success', '新しいプロフィールを登録しました');
     }
 
