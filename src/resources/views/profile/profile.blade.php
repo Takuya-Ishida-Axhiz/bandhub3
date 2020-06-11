@@ -16,10 +16,10 @@ Bandhub Profile {{ Auth::user()->name }}
                 <header>
                     <!-- here’s the avatar -->
                     <a target="_blank" href="#">
-                    @if ($is_image)
-                    <img src="/storage/profile_images/{{ Auth::id() }}.jpg"  width="100px" height="100px">
-                    </a>
+                    @if($auths->avatar_filename)
+                        <img src="{{ asset('storage/avatar/' .$auths->avatar_filename) }}" alt="avater" width="100px" height="100px">
                     @endif
+                    </a>
 
                     <!-- the username -->
                     <h1>

@@ -24,41 +24,37 @@ Bandhub Profile Edit {{ Auth::user()->name }}
                 </nav>
             </div>
 
-             <!-- エラーメッセージ。なければ表示しない -->
-             @if ($errors->any())
-                <ul>
-                    @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                @endif
-
-                
-
-            <!-- フォーム -->
-            <form action="{{ url('/profile/store',$auths->id) }}" method="POST" enctype="multipart/form-data">
-
-                <!-- アップロードした画像。なければ表示しない -->
-                @isset ($filename)
-                <div>
-                    <img src="{{ asset('storage/' . $filename) }}">
-                </div>
-                @endisset
-
-                @if ($is_image)
-                <figure>
-                    <img src="/storage/profile_images/{{ Auth::id() }}.jpg" width="100px" height="100px">
-                    <figcaption>現在のプロフィール画像</figcaption>
-                </figure>
-                @endif
-                
-
-                <input type="file" class="form-control" name="photo">
-                <br>
+            <form method="post" action= "{{ url('/profile/store',$auths->id)}}" enctype="multipart/form-data" >
                 {{ csrf_field() }}
-                <button class="btn btn-outline-dark rounded-pill"> 画像をアップデート </button>
-                
+                @if (session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <div class="form-group">
+                    @if($auths->avatar_filename)
+                    <p>
+                        <img src="{{ asset('storage/avatar/' .$auths->avatar_filename) }}" alt="avater" width="100px" height="100px">
+                    </p>
+                    @endif
+                </div>
+                <div class="form-group">
+                    <input type="file" class="form-control" name="file">
+                    <br>
+                    <input type="submit" class="btn btn-outline-dark rounded-pill" value="画像をアップデートする">
+                </div>
             </form>
+
+
+
             <br>
             <br>
     

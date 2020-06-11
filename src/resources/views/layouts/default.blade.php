@@ -25,7 +25,7 @@
             <nav class="navbar bg-dark navbar-expand-md shadow-sm mb-5　navbar-prim  ">
                     <a href="/"><img class="navbar-brand img-responsive " width="70" height="70" src = "{{ asset('assets/images/src/logo.png') }}"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"　style="background-color:white;"></span>
                         </button>
 
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -60,7 +60,9 @@
                     </ul>
 
                     
-                    <a href = "/logout"> <img src="/storage/profile_images/{{ Auth::id() }}.jpg"  width="50px" height="50px" style="border-radius: 50%;"></a>
+                    <a href = "/logout" >
+                    <p class = "btn btn-outline-light rounded-pill mb-0">Logout</p>
+                    </a>
                     
                     </div>
                     

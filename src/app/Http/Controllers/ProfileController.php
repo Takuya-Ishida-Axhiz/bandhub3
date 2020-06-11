@@ -34,11 +34,33 @@ class ProfileController extends Controller
         
     }
 
-    public function store (ProfileRequest $request)
-    {
-        $request->photo->storeAs('public/profile_images', Auth::id() . '.jpg');
+    // public function store (ProfileRequest $request)
+    // {
+    //     $auths = Auth::user();
+    //     $request->photo->storeAs('public/profile_images', Auth::id() . '.jpg');
 
-        return redirect('/profile')->with('success', '新しいプロフィールを登録しました');
+    //     return redirect('/profile')->with('success', '新しいプロフィールを登録しました');
+    // }
+
+    public function store (Request $request)
+    {
+        $this->validate($request, [
+            'file' => [
+                'required', 'file', 'mimes:jpeg,png'
+            ]
+        ]);
+        if ($request->file('file')->isValid([])) {
+            $filename = $request->file->store('public/avatar');
+            $auths = Auth::user();
+            Storage::disk('local')->delete('public/avatar/'.$auths->avatar_filename);
+
+            $auths->avatar_filename = basename($filename);
+            $auths->save();
+
+            return redirect('/profile')->with('success', '保存しました');
+        } else {
+            return redirect()->back()->withInput()->witherrors(['file' => '画像がアップロードされてないか不正なデータです。']);
+        }
     }
 
     
