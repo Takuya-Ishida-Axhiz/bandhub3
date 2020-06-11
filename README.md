@@ -1,9 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#laravel_app4
-=======
-# bandhub2
->>>>>>> origin/master
-=======
-# bandhub3
->>>>>>> origin/master
+Bandhub
+====
+このアプリは、 バンドマンがライブハウスに提出するセッティングシートを一括管理できるアプリ です。
+//機能一覧
+セッティングシート 作成/編集/削除 機能
+セッティングシート 内への曲情報の追加/編集/削除 機能
+プロフィール機能
+ログイン機能
+画像アップロード機能
+
+【使用した技術一覧】
+HTML/CSS/Bootstrap4/PHP/Laravel/AWS/Docker/MySQL
