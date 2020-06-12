@@ -30,39 +30,32 @@
                         </button>
 
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/bands">Band</a>
-                        </li>
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/bands">Band</a>
+                      </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/sheets">Sheet</a>
-                        </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/sheets">Sheet</a>
+                      </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sound</a>
-                        </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Sound</a>
+                      </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profile">Profile</a>
-                        </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/profile">Profile</a>
+                      </li>
+                  </ul>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    </div>
-                    
                 </div>
+                    
+                <a href = "/loginsaiyou" >
+                    <p class = "btn btn-outline-light rounded-pill mb-0">採用ご担当者様ログイン</p>
+                    </a>
             </nav>
   </header>
 
@@ -82,7 +75,7 @@
           <div class="carousel-caption text-left">
             <h1>Tools for All Bandmen.</h1>
             <p>完璧な打ち合わせはあなたを最高のステージへ。</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Get started</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/login" role="button">Get started</a></p>
           </div>
         </div>
       </div>
@@ -93,7 +86,7 @@
           <div class="carousel-caption ">
           <h1>Perfect Setting Sheet.</h1>
             <p>リハの前からPAはあなたのことを完璧に知っている</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/login" role="button">Learn more</a></p>
           </div>
         </div>
       </div>
@@ -104,7 +97,7 @@
           <div class="carousel-caption text-right">
             <h1>Tell me your gear.</h1>
             <p>あなたのGearを発信しよう</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gear</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/login" role="button">Browse gear</a></p>
           </div>
         </div>
       </div>

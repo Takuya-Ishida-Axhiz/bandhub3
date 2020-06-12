@@ -14,6 +14,8 @@
 
 Route::get('/','SheetsController@top');
 Route::get('/logout','SheetsController@getLogout');
+Route::get('/loginsaiyou','SheetsController@loginsaiyou');
+
 
 Route::group(["middleware"=>"auth"],function(){
 
@@ -59,7 +61,7 @@ Route::group(["middleware"=>"auth"],function(){
 
 
 
-    Route::get('/soundup','SoundController@index');
+    Route::get('/sounds','SoundController@index');
  
 
 

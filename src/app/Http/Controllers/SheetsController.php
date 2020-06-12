@@ -18,6 +18,11 @@ class SheetsController extends Controller
         return redirect('/login');
         }
 
+    public function loginsaiyou(){
+        return view('/loginsaiyou');
+        }
+    
+
 
    
     public function sheet_latest(){
@@ -29,7 +34,14 @@ class SheetsController extends Controller
 
 
     public function sheet_index(){
-        $sheets = Sheet::all();
+        $user = Auth::User();
+        $user_id = $user->id;
+        $band = $user->bands()->get();
+        // $bands = Band::where('id', $user_id)->first();
+        // $band_id = 
+        $sheets = Sheet::where('band_id',1)->get();
+
+        
         return view('sheets.sheet_index',['sheets' => $sheets]);
     }
 

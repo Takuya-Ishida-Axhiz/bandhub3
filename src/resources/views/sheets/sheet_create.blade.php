@@ -47,7 +47,7 @@ Bandhub NewSheet
 
                 <div class="form-group">
                     <label for="exampleFormControlInput1">バンドID</label>
-                    <input name="band_id" type="int" class="form-control" id="exampleFormControlInput1" placeholder="例：12">
+                    <input name="band_id" type="int" class="form-control" id="exampleFormControlInput1" value="1">
                 </div>
 
                 <input type="submit" class="btn btn-success" value="新規作成">
