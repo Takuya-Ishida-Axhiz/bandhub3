@@ -62,6 +62,7 @@ Route::group(["middleware"=>"auth"],function(){
 
 
     Route::get('/sounds','SoundController@index');
+    Route::get('/upload','SoundController@upload');
  
 
 

@@ -10,5 +10,9 @@ class SoundController extends Controller
         return view('sounds.index');
     }
 
+    public function upload(){
+        return view('sounds.upload');
+
+    }
     
 }
