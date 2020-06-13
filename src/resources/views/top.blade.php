@@ -54,7 +54,7 @@
                 </div>
                     
                 <a href = "/loginsaiyou" >
-                    <p class = "btn btn-outline-light rounded-pill mb-0">採用ご担当者様ログイン</p>
+                    <p class = "btn btn-outline-light rounded-pill mb-0">ログイン</p>
                     </a>
             </nav>
   </header>
@@ -69,7 +69,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src = "{{ asset('assets/images/src/live.jpg') }}" style="width:100%;  height=100%">
+        <img src = "{{ asset('assets/images/src/live.jpg') }}" style="width:100%;  height=200%">
         
         <div class="container">
           <div class="carousel-caption text-left">
@@ -80,7 +80,7 @@
         </div>
       </div>
       <div class="carousel-item">
-      <img src = "{{ asset('assets/images/src/pa.jpg') }}" style="width:100%;  height=100%">
+      <img src = "{{ asset('assets/images/src/pa.jpg') }}" style="width:100%;  height=200%">
         
         <div class="container">
           <div class="carousel-caption ">
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="carousel-item">
-      <img src = "{{ asset('assets/images/src/amp.jpg') }}" style="width:100%;  height=100%">
+      <img src = "{{ asset('assets/images/src/amp.jpg') }}" style="width:100%;  height=200%">
         
         <div class="container">
           <div class="carousel-caption text-right">
