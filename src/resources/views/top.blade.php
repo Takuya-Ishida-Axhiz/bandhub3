@@ -59,7 +59,7 @@
             </nav>
   </header>
 
-<main role="main">
+<main role="main" >
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">

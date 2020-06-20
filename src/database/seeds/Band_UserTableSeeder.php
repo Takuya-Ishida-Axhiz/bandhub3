@@ -17,6 +17,11 @@ class Band_userTableSeeder extends Seeder
         $band_user->save();
 
         $band_user = new \App\Band_user([
+            'band_id'=>2,'user_id'=>2
+        ]);
+        $band_user->save();
+
+        $band_user = new \App\Band_user([
             'band_id'=>1,'user_id'=>3
         ]);
         $band_user->save();

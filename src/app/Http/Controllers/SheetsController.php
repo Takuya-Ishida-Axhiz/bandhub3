@@ -36,12 +36,11 @@ class SheetsController extends Controller
     public function sheet_index(){
         $user = Auth::User();
         $user_id = $user->id;
-        $band = $user->bands()->get();
-        // $bands = Band::where('id', $user_id)->first();
-        // $band_id = 
-        $sheets = Sheet::where('band_id',1)->get();
-
-        
+        $bands = $user->bands()->get();
+        foreach ($bands as $band) {
+            $band_id[] = $band->id;
+        }
+        $sheets = Sheet::whereIn('band_id',$band_id)->get();
         return view('sheets.sheet_index',['sheets' => $sheets]);
     }
 
@@ -60,8 +59,8 @@ class SheetsController extends Controller
 
 
 
-    public function sheet_create(){
-        return view('sheets.sheet_create');
+    public function sheet_create($id){
+        return view('sheets.sheet_create',['id'=>$id]);
     }
 
     public function sheet_store(Request $request){
