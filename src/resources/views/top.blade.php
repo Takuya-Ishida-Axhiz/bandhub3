@@ -34,16 +34,16 @@
                       <li class="nav-item">
                           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                           <a class="nav-link" href="/bands">Band</a>
-                      </li>
+                      </li> -->
 
                       <li class="nav-item">
                           <a class="nav-link" href="/sheets">Sheet</a>
                       </li>
 
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Sound</a>
+                          <a class="nav-link" href="/sounds">Sound</a>
                       </li>
 
                       <li class="nav-item">
