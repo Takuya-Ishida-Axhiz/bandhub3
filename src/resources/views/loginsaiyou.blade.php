@@ -9,6 +9,10 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="243290630901-olj07a11mrtlgedm351m2131nuejpohv.apps.googleusercontent.com">
+
 </head>
 <body>
     <!--
@@ -35,6 +39,20 @@
             <a href="#" class="forgot-password">
                 Forgot the password?
             </a>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <script>
+                    function onSignIn(googleUser) {
+                        var id_token = googleUser.getAuthResponse().id_token;
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', 'test.php');
+                        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        xhr.onload = function() {
+                            console.log('Signed in as: ' + xhr.responseText);
+                        };
+                        xhr.send('idtoken=' + id_token);
+                        window.location.href = 'index.php';
+                    }
+                </script>
         </div><!-- /card-container -->
     </div><!-- /container -->
 
