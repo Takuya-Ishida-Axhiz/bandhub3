@@ -31,6 +31,9 @@ Bandhub Sheets
                         <div class="card-body">
                             <h5 class="card-title">動画名</h5>
                             <p class="card-text">@ バンド名 投稿日時</p>
+                            @foreach ($videos as $video)
+                            <p>{{ $video->body }}</p>
+                            @endforeach 
                             <a href="#" class="btn btn-outline-dark rounded-pill mb-0">再生</a>
                         </div>
                         </div>

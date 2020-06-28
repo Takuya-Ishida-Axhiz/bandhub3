@@ -17,6 +17,8 @@ Route::get('/logout','SheetsController@getLogout');
 Route::get('/loginsaiyou','SheetsController@loginsaiyou');
 
 
+
+
 Route::group(["middleware"=>"auth"],function(){
 
     
