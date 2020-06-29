@@ -19,28 +19,21 @@ Bandhub Sheets
             <a href = "/upload"  class = "btn btn-outline-success rounded-pill mb-0">新規アップロード</a>
            
 
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            </div>
+            
                 <!-- カードで表示する部分 -->
-                <div class="container">
-                    <div class="row">
-                        
-                      
-                        
-                        <div class="card  col-sm-5 col-md-3 pr-2 mb-2 ">
-                        <div class="card-body">
-                            <h5 class="card-title">動画名</h5>
-                            <p class="card-text">@ バンド名 投稿日時</p>
-                            @foreach ($videos as $video)
-                            <p>{{ $video->body }}</p>
-                            @endforeach 
-                            <a href="#" class="btn btn-outline-dark rounded-pill mb-0">再生</a>
-                        </div>
-                        </div>
-                        
-                    </div>    
-                </div>     
-            </div>
+                    
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 mt-2 ">
+                        @foreach ($movies as $movie)
+                            <div class="card  ">
+                                {!! $movie['html'] !!} 
+                                <div class="card-body px-2 py-3">
+                                    <p class="card-text"><a href="{{ $movie['link'] }}">{{ $movie['name'] }}</a> from <a href="{{ $movie['useruri'] }}">{{ $movie['username'] }}</a> on <a href="https://vimeo.com">Vimeo</a></p>
+                                </div><!-- /.card-body -->
+                            </div><!-- /.card -->
+                        @endforeach 
+                    </div><!-- /.col-sm-6.col-md-3 -->
+                </div><!-- /.row -->
             
 
     </main>
