@@ -16,14 +16,14 @@ Bandhub Sheets
             </nav>
 
             <br>
-            <a href = "/upload"  class = "btn btn-outline-success rounded-pill mb-0">新規アップロード</a>
+            <!-- <a href = "/upload"  class = "btn btn-outline-success rounded-pill mb-0">新規アップロード</a> -->
            
 
             
                 <!-- カードで表示する部分 -->
                     
                 <div class="row">
-                    <div class="col-sm-6 col-md-4 mt-2 ">
+                    <div class="col-sm-6 col-md-4 mt-2 pt-2 ">
                         @foreach ($movies as $movie)
                             <div class="card  ">
                                 {!! $movie['html'] !!} 

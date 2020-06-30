@@ -34,7 +34,7 @@ Route::group(["middleware"=>"auth"],function(){
     // /sheetsのルーティング
     Route::get('/sheets','SheetsController@sheet_index');
     Route::get('/sheets/{id}','SheetsController@sheet_confirm')->where('id','[0-9]+');
-    Route::get('/sheets/create/{id}','SheetsController@sheet_create');
+    Route::get('/sheets/create','SheetsController@sheet_create');
     Route::post('/sheets/store','SheetsController@sheet_store');
     Route::get('/sheets/edit/{id}','SheetsController@sheet_edit')->where('id','[0-9]+');
     Route::patch('/sheets/update/{id}','SheetsController@sheet_update')->where('id','[0-9]+');

@@ -59,8 +59,8 @@ class SheetsController extends Controller
 
 
 
-    public function sheet_create($id){
-        return view('sheets.sheet_create',['id'=>$id]);
+    public function sheet_create(){
+        return view('sheets.sheet_create');
     }
 
     public function sheet_store(Request $request){
